@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.directoryPhoto {
+  height: 600px;
+  width: 75%;
+}
