@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
 import './App.css';
-import Directory from './components/DirectoryComponent';
+import Main from './components/MainComponent';
+import { BrowserRouter } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar dark color="primary">
-        <div className="container">
-          <NavbarBrand href="">Mian's Portfolio</NavbarBrand>
-        </div>
-      </Navbar>
-      <Directory />
-    </div>
-  );
+class App extends Component {
+
+  render(){
+    return(
+      <BrowserRouter>
+        <div className="App">
+          <Main />
+        </div>     
+      </BrowserRouter>
+      
+    );
+  }; 
 }
 
 export default App;

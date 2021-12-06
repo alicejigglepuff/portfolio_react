@@ -37,7 +37,84 @@
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
+
+/* Image Formats */
 .directoryPhoto {
   height: 600px;
   width: 75%;
 }
+.coverPhoto{
+  height: 550px;
+  width: 100%;
+}
+.aboutPhoto{
+  height: 300px;
+  width: 100%;
+  border:3px dashed white;
+  border-radius:12px;
+}
+
+/* elements */
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: cursive;
+}
+
+h2, h3 {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.row-end {
+  border-bottom: 1px ridge;
+}
+
+.row-padding{
+  padding: 50px 0;
+}
+
+.site-footer {
+  background-image: linear-gradient(#57A0D3, white);
+  padding: 20px 0;
+}
+
+.jumbotron {
+  color: black;
+  
+}
+
+#headerJumbo {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.headerContent{
+  align-items: center;
+  text-align: center;
+  /* background-image: linear-gradient(to right, #57A0D3, #3046C5, #011B56); */
+}
+
+.jumbotron h2 {
+  color: #57A0D3;
+}
+
+.left-align{
+  text-align: left;
+}
+
+.navbar-dark {
+  background-color: #57A0D3;
+}
+
+

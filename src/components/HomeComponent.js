@@ -2,18 +2,23 @@ import React, { Component } from 'react';
 
 import '../App.css'
 
-class Directory extends Component {
+class Home extends Component {
     constructor(props){
         super(props);
     }
 
     render(){
-        const directory = this.props.projects.map(project => {
+        const home = this.props.projects.map(project => {
             return(
                 <div key="project.id" className="container">
+                    <br />
+                    <br />
                     <h2>{project.name}</h2>
                     <p>{project.description}</p>
-                    <img src={project.image} alt={project.name} className="directoryPhoto "/>
+                    <div className="row-content">
+                        <img src={project.image} alt={project.name} className="directoryPhoto "/>
+                    </div>
+                    
                     
                 </div>
             )
@@ -22,11 +27,11 @@ class Directory extends Component {
         return(
             <div className="container">
                 <div className="row">
-                    {directory}
+                    {home}
                 </div>
             </div>
         )
     }
 }
 
-export default Directory;
+export default Home;
