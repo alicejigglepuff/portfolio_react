@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Card, Nav} from 'react-bootstrap';
 import '../App.css'
 
 class About extends Component {
@@ -81,13 +82,25 @@ class About extends Component {
                         </div>
                     </div>
                     <div className="col">
-                        <img className="aboutPhoto" src="../assets/images/ouc.jpg" alt="cornell" />
+                        <img className="aboutPhoto" src="../assets/images/ouc.jpg" alt="Ocean University of China" />
                     </div>
                 </div>
             
                 
                 <div className="row row-content">
                     <h2><i className="fa fa-book" />Certificates</h2>
+                    
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src="../assets/images/certificate1.png" />
+                        <Card.Body>
+                            <Card.Title>bootstrap</Card.Title>
+                            <Card.Text>
+                            Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                            </Card.Text>
+                            
+                        </Card.Body>
+                    </Card>
                 
                 </div>
             </div>
