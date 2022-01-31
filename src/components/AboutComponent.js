@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Card, Nav} from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
 import '../App.css'
 
 class About extends Component {
@@ -87,25 +88,23 @@ class About extends Component {
                 </div>
             
                 
-                <div className="row row-content">
+                <div>
                     <h2><i className="fa fa-book" />Certificates</h2>
                     
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="../assets/images/certificate1.png" />
-                        <Card.Body>
-                            <Card.Title>bootstrap</Card.Title>
-                            <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                            </Card.Text>
-                            
-                        </Card.Body>
-                    </Card>
-                
+                    
                 </div>
             </div>
         );
+
+
     }
+
+
+}
+const aboutStyle = {
+    color: 'red',
+    margin: '50px',
+
 }
 
 export default About;

@@ -10,6 +10,7 @@ import { PROJECTS } from '../shared/projects';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import '../App.css'
 
+
 class Main extends Component {
     constructor(props){
         super(props);
@@ -29,8 +30,10 @@ class Main extends Component {
         return(
             <div>
                 <Header />
+                
+                
                 <Switch>
-                    <Route  path='/home' component={HomePage} />
+                    <Route  path='/' component={HomePage} />
                     <Route exact path='/directory' render={() => <Directory projects={this.state.projects} />} />
                     <Route exact path='/contact' component={Contact} />
                     <Route exact path='/about' component={About} />

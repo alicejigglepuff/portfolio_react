@@ -45,7 +45,7 @@
   width: 75%;
 }
 .coverPhoto{
-  height: 550px;
+  height: 650px;
   width: 100%;
 }
 .aboutPhoto{
@@ -67,6 +67,35 @@ h1 {
 
 h2, h3 {
   font-family: "Libre Franklin", sans-serif;
+}
+
+/* classes */
+.bg-img {
+  background-image: url("./images/cover1.jpg");
+  height: 650px;
+  width: 100%;
+}
+
+.certificateCard {
+  width: 40px;
+  margin: 15px;
+  color: red
+}
+
+.headerContent{
+  align-items: center;
+  text-align: center;
+  /* background-image: linear-gradient(to right, #57A0D3, #3046C5, #011B56); */
+}
+
+.headerText {
+  position: absolute;
+  top: 570px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  font-size: xx-large;
+  font-family: lobster;
 }
 
 .row-content {
@@ -99,11 +128,7 @@ h2, h3 {
   background-color: white;
 }
 
-.headerContent{
-  align-items: center;
-  text-align: center;
-  /* background-image: linear-gradient(to right, #57A0D3, #3046C5, #011B56); */
-}
+
 
 .jumbotron h2 {
   color: #57A0D3;
@@ -113,8 +138,15 @@ h2, h3 {
   text-align: left;
 }
 
-.navbar-dark {
+/* .navbar-dark {
   background-color: #57A0D3;
+} */
+
+
+.navbar{
+  background-color: transparent;
 }
 
-
+.navbar.colorChange{
+  background-color: #000;
+}
