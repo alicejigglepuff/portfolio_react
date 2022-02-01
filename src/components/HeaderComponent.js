@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import { Nav, Navbar, NavbarBrand, Jumbotron, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import NavBar from "./NavBar";
+
 
 class Header extends Component {
 
@@ -10,8 +10,10 @@ class Header extends Component {
 
         this.toggleNav = this.toggleNav.bind(this);    
         this.state = {
-            isNavOpen: false
+            isNavOpen: false,
+            status: "top"
         };
+        this.listener = null;
     }
 
     toggleNav(){
@@ -20,12 +22,39 @@ class Header extends Component {
         });
     }
 
+    componentDidMount() {
+        this.listener = document.addEventListener("scroll", e => {
+          var scrolled = document.scrollingElement.scrollTop;
+          if (scrolled >= 550) {
+            if (this.state.status !== "notTop") {
+              this.setState({ status: "notTop" });
+            }
+          } else {
+            if (this.state.status !== "top") {
+              this.setState({ status: "top" });
+            }
+          }
+        });
+    }
+
+    componentDidUpdate() {
+        document.removeEventListener("scroll", this.listener);
+    }
+
     render(){
         return(
             <React.Fragment>
-                <NavBar />
                 
-                {/* <Navbar dark fixed="top" expand="md">
+                
+                <Navbar 
+                    dark fixed="top" expand="md"
+                    style={{
+                        backgroundColor: this.state.status === "top" ? "transparent" : "#2b3621",
+                        // color: this.state.status === "top" ? "white" : "blue",
+                        opacity: 0.7,
+                        position: "fixed"
+                      }}               
+                >
                     <div className="container">
                         <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" height="30" width="30" alt="" /></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
@@ -59,7 +88,7 @@ class Header extends Component {
                             </Nav>
                         </Collapse>
                     </div>
-                </Navbar> */}
+                </Navbar>
                 
                 <Jumbotron fluid id="headerJumbo">
                     <div>

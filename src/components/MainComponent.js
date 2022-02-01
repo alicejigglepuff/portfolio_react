@@ -33,10 +33,13 @@ class Main extends Component {
                 
                 
                 <Switch>
-                    <Route  path='/' component={HomePage} />
+                    <Route  path='/home' component={HomePage} />
                     <Route exact path='/directory' render={() => <Directory projects={this.state.projects} />} />
                     <Route exact path='/contact' component={Contact} />
                     <Route exact path='/about' component={About} />
+                    <Route exact path="/">
+                        <Redirect to="/home" />
+                    </Route>
                 </Switch>
                 
                 
